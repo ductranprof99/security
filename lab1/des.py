@@ -116,7 +116,6 @@ class Solution:
         xor1 = self.xor(extend_48,self.key_code[N],48)
         # shirnk
         xor1_shrink = self.P_aka_Srink(xor1)
-        print(xor1_shrink)
         # last pemutation
         fin_f = self.pemutation(xor1_shrink, self.LAST_P)
         #finnaly create R_n
@@ -130,6 +129,10 @@ a = Solution(data_input,key_input)
 a.R0_L0_cal()
 a.gen_all_key()
 a.gen_L_R()
+print(a.R_n[0])
+print(a.R_n[1])
 
+c=a.pemutation(a.R_n[0]+a.R_n[1],a.IP_minus)
+print(c)
 
 #K1 011110000010011000001001001000010110101000100010
